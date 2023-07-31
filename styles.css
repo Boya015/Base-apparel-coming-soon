@@ -1,0 +1,76 @@
+
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    
+    body,main,div,h1, p,{
+      margin: 0;
+      padding: 0;
+    }
+    
+    html:focus-within {
+        scroll-behavior: smooth;
+      }
+      
+      img,
+      picture {
+        max-width: 100%;
+        display: block;
+      }
+    
+      ul[role="list"],
+      ol[role="list"] {
+      list-style: none;
+    }
+        
+      @media (prefers-reduced-motion: reduce) {
+        html:focus-within {
+         scroll-behavior: auto;
+        } 
+      
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      body {
+        background-image: url(images/bg-pattern-desktop.svg);
+      }
+
+      .Base_logo {
+        margin-bottom: 40px;
+      }
+
+      .container {
+        padding: 25px;
+      }
+   
+      .mobile_pic {
+        width: -webkit-fill-available;
+        margin: 22px 0px 0px 0px;
+      }
+
+      .Heading {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      p {
+        text-align: center;
+      }
+      
+      input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 25px;
+        border-style: solid;
+      }
+
+      
+
