@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Poppins:wght@200;400;600&display=swap');
 
+:root {
+--- Red: hsl(0, 78%, 62%);
+--- Cyan: hsl(180, 62%, 55%);
+--- Orange: hsl(34, 97%, 64%);
+--- Blue: hsl(212, 86%, 64%);
+--- Very Dark Blue: hsl(234, 12%, 34%);
+--- Grayish Blue: hsl(229, 6%, 66%);
+--- Very Light Gray: hsl(0, 0%, 98%);
+    }
+    
+    /* reset-css */
+    ,
     *::before,
     *::after {
       box-sizing: border-box;
     }
     
-    body,main,div,h1, p,{
+    body,main,div,h1,h2, p,{
       margin: 0;
-      padding: 0;
     }
     
     html:focus-within {
@@ -40,37 +52,161 @@
       }
 
       body {
-        background-image: url(images/bg-pattern-desktop.svg);
+        background-color:  hsl(0, 0%, 98%);
+        margin: 10%;
       }
 
-      .Base_logo {
-        margin-bottom: 40px;
+      main {
+        
+      }
+
+      h2{ 
+        font-family: 'Poppins', sans-serif;
+        color: hsl(234, 12%, 34%);
       }
 
       .container {
-        padding: 25px;
-      }
-   
-      .mobile_pic {
-        width: -webkit-fill-available;
-        margin: 22px 0px 0px 0px;
+        display: grid;
+        gap: 30px
+
       }
 
-      .Heading {
-        text-align: center;
+      .Header {
+        padding: 0px 0px 0px 25px; 
+      }
+
+      .Supervisor {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 1rem 2rem 0.5rem #dedede;
+        border-top-color: hsl(180, 62%, 55%);
+        border-top-style: solid;
         margin-top: 50px;
+        
       }
 
-      p {
+      .Builder {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 1rem 2rem 0.5rem #dedede;
+        border-top-color: hsl(0, 78%, 62%);
+        border-top-style: solid;
+      }
+
+      .Karma {
+        padding-left: 25px;
+        padding-bottom: 30px;
+        padding-right: 40px;
+        border-radius: 8px;
+        box-shadow: 0 1rem 2rem 0.5rem #dedede;
+        border-top-color: hsl(34, 97%, 64%);
+        border-top-style: solid;
+      }
+
+      .Calculator {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 1rem 2rem 0.5rem #dedede;
+        border-top-color: hsl(212, 86%, 64%);
+        border-top-style: solid;
+      }
+ 
+      .Main_heading{
+        font-size: 30px;
+        font-weight: 200;
+        margin: -2%;
         text-align: center;
-      }
-      
-      input {
-        width: 100%;
-        padding: 10px;
-        border-radius: 25px;
-        border-style: solid;
+        color: hsl(234, 12%, 34%);
+        font-family:'Poppins', sans-serif;
       }
 
-      
+      .Sub_heading {
+        text-align: center;
+        font-family:'Poppins', sans-serif;
+        font-size:  1.9em;
+        color: hsl(234, 12%, 34%);
+
+      }
+
+      .sub_paragraph {
+        color:hsl(229, 6%, 66%);
+        margin: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-size: small;
+        
+       }
+
+       .card_paragraph {
+        color: hsl(229, 6%, 66%);
+        font-family: 'Poppins', sans-serif;
+        font-size: small;
+       }
+
+       .icon {
+        display: flex;
+        justify-content: right;
+       }
+
+       /* Desktop View */
+
+       @media (min-width: 600px) {
+        .container {
+          display: grid;
+          grid-auto-columns: 35% 35% 35%;
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .Supervisor {
+          margin-top: 0px;
+        }
+
+        .sub_paragraph {
+          text-align: center;
+          
+        }
+       }
+
+       @media (min-width: 1250px) {
+        .sub_paragraph {
+         padding: 0px 300px 0px 300px;
+         margin-bottom: 50px;
+        }
+        
+        
+        .container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-template-areas:
+          "start mid1 end"
+          "start mid2 end";
+        }
+
+        .Supervisor {
+          grid-area: start;
+          align-self: center;
+        }
+
+        .Builder {
+          grid-area: mid1;
+        }
+
+        .Karma {
+          grid-area: mid2;
+        }
+
+        .Calculator {
+          grid-area: end;
+          align-self: center;
+        }
+       }
+
+
+
 
