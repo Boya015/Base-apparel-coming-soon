@@ -19,20 +19,22 @@
     <div class="container">
       
       <div class="logo">
-        <img class="Base_logo" src = "images/logo.svg" alt="Base-Apparel_svg"/>
+        <img class="Base_logo" src = "images/logo.svg" alt="Base Apparel Logo"/>
       </div>
       
-      <picture>
-        <img class="mobile_pic" src = "images/hero-desktop.jpg"/>
-      </picture>
+      
       
       <div class="content">
         <div class="Heading">
         <h1>We're</h1> 
-        <span>coming soon</span>
+          <div class="sub_heading">
+          <span class="first-word">Coming</span>
+          <span class="second-word">Soon</span>
         </div>
         
-        <p> Hello fellow shoppers! We're currently building our new fashion store. 
+        </div>
+        
+        <p class="body_paragraph"> Hello fellow shoppers! We're currently building our new fashion store. 
           Add your email below to stay up-to-date with announcements and our launch deals.
         </p>
       
@@ -48,15 +50,20 @@
                data-touched="true" 
                class="cta-form__input js-input" 
                fdprocessedid="frhk2">
-  
+               
                <button type="submit">
                 <img class="Checkbox" src = "images/icon-arrow.svg"/>
                </button>
-        </form>
-  
+               <div style="color: red;" id="email-error" aria-live="polite"></div>
+              </form>
       
         </div>
-    
+        
+        <picture>
+          <!-- Mobile Image -->
+          <source srcset="images/hero-mobile.jpg" media="(max-width: 767px)" />
+          <img class="mobile_pic" src = "images/hero-desktop.jpg"/>
+        </picture>
   </main>
 
   
