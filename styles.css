@@ -1,7 +1,4 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
-    
+   
 
 :root {
   ---Desaturated Red: hsl(0, 36%, 70%);
@@ -67,7 +64,7 @@
 
       .container {
         display: grid;
-        grid-template-columns: 1.1fr 1fr;
+        grid-template-columns: 52% 50%;
         
       }
 
@@ -86,13 +83,6 @@
         object-fit: cover;
       }
 
-      .Heading {
-        text-align: center;
-        text-transform: uppercase;
-        font-size: large;
-        letter-spacing: 7px;
-      }
-
 
       .content {
         display: flex;
@@ -106,15 +96,20 @@
         margin-bottom: 0em;
         font-weight: 100;
         color: hsl(0, 36%, 70%);
-        font-size: 3em;
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 7px;
+        text-align: center;
       }
 
       .sub_heading {
-        font-size: 3em;
+        font-size: 3rem;
         display: flex;
         flex-direction: column;
         text-transform: uppercase;
         font-weight: 600;
+        letter-spacing: 7px;
+        text-align: center;
       }
 
       .body_paragraph {
@@ -123,6 +118,19 @@
         line-height: 1.5em;
         color: hsl(0, 36%, 70%);
       }
+
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
 
       .input-form {
         display: grid;
@@ -138,23 +146,58 @@
         border-style: solid;
         padding-left: 30px;
         padding-right: 30px;
+        position: relative;
+        height: 16px;
       }
 
-      button {
+      #submit-btn {
+        background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0 74% 74% / 1));
         position: relative;
         right: 30px;
         padding-right: 50px;
-    /* padding-bottom: 13px; */
         border-radius: 25px;
         width: 80px;
         height: 40px;
-        border-style: solid;
+        border: none;
+        
+        
+        
       }
 
       .Checkbox {
         position: relative;
         left: 2em;
       }
+
+      /* Add the following CSS styles to position the error icon inside the input */
+
+
+#email {
+  padding-right: 30px; /* Add padding to the right to make space for the icon */
+}
+
+#error-icon {
+  position: relative;
+  left: 20em;
+  top: -19px;
+  transform: translateY(-50%);
+  display: none;
+  
+}
+
+/* Show the error icon when the input has an error class */
+#error-icon.error {
+  display: inline;
+}
+
+#error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-left: 30px;
+  display: none;
+}
+
       
       @media (max-width: 768px) {
        .container{
@@ -178,9 +221,18 @@
 
         .mobile_pic{
           max-width: 100%;
-          
-          
         }
+          
+
+        #error-icon {
+          position: relative;
+          left: 12em;
+          top: -19px;
+          transform: translateY(-50%);
+          display: none;
+          }
+          
+        
       }
 
       /* desktop view */
@@ -219,6 +271,8 @@
           text-align: left;
           
         }
+
+        
       }
       
       @media (min-width: 1250px) {
@@ -229,21 +283,32 @@
         .body_paragraph {
           /* padding: 0px 200px 0px 200px; */
         }
+         
+        h1{
+          margin-right: 16rem;
+        }
+
 
         .logo {
           margin: 70px 0px 0px 120px;
         }
 
-        .Heading {
-          margin: 0em 8em 0em 0em;
-        }
 
         span {
           text-align: left;
+          margin-right: 11rem;
         }
 
         .input-form {
           margin-right: 10em;
+        }
+
+        input {
+          width: 161%;
+        }
+
+        button {
+          left: 120px;
         }
       }
  
