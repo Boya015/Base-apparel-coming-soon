@@ -18,10 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const email = emailInput.value;
       if (!isValidEmail(email)) {
         errorMessage.textContent = "Please provide a valid email.";
+        errorMessage.style.display = "block"; // Show the error message
+        emailInput.classList.add("input-error"); // Add the CSS class for red border
         emailInput.classList.add("error");
         errorIcon.style.display = "inline";
       } else {
-        errorMessage.textContent = "";
+        errorMessage.style.display = "none"; // Hide the error message
         emailInput.classList.remove("error");
         errorIcon.style.display = "none";
         // Perform form submission or other actions here
@@ -35,10 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add event listener for button click
     submitBtn.addEventListener("click", function () {
       if (!isValidEmail(emailInput.value)) {
-        errorMessage.textContent = "Please provide a valid email.";
-        emailInput.classList.add("error");
+        errorMessage.style.display = "block"; // Show the error message
+        emailInput.classList.add("input-error");
         errorIcon.style.display = "inline";
       }
     });
   });
+  
   

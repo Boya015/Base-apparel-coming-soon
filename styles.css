@@ -135,7 +135,7 @@
       .input-form {
         display: grid;
         grid-template-columns: 1fr auto;
-        gap: 10px;
+        gap: 14px;
         margin-left: 36px;
       }
       
@@ -158,10 +158,12 @@
         border-radius: 25px;
         width: 80px;
         height: 40px;
-        border: none;
-        
-        
-        
+        border: none;  
+      }
+
+      #submit-btn:hover {
+        background: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 100%, 98%)); /* Change the colors for the hover effect */
+        cursor: pointer; /* Add a pointer cursor on hover to indicate interactivity */
       }
 
       .Checkbox {
@@ -169,34 +171,37 @@
         left: 2em;
       }
 
+      .input-error {
+        border: 2px solid red;
+      }
+
       /* Add the following CSS styles to position the error icon inside the input */
 
 
-#email {
-  padding-right: 30px; /* Add padding to the right to make space for the icon */
-}
+      #email {
+       padding-right: 30px; /* Add padding to the right to make space for the icon */
+      }
 
-#error-icon {
-  position: relative;
-  left: 20em;
-  top: -19px;
-  transform: translateY(-50%);
-  display: none;
-  
-}
+       #error-icon {
+         position: relative;
+         left: 20em;
+         top: -19px;
+         transform: translateY(-50%);
+        display: none;
+        }
 
 /* Show the error icon when the input has an error class */
-#error-icon.error {
-  display: inline;
-}
+       #error-icon.error {
+        display: inline;
+        }
 
-#error-message {
-  color: red;
-  font-size: 14px;
-  margin-top: 5px;
-  margin-left: 30px;
-  display: none;
-}
+        #error-message {
+         color: red;
+         font-size: 14px;
+         margin-top: -30px;
+         margin-left: 30px;
+         display: none;
+       }
 
       
       @media (max-width: 768px) {
